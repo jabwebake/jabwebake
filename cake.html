@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jab We Bake - Delicious Cakes for Every Occasion</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fef3f6; /* Light pink background */
+        }
+        .text-primary {
+            color: #d946b8; /* A shade of pink for primary elements */
+        }
+        .bg-primary {
+            background-color: #d946b8;
+        }
+        .border-primary {
+            border-color: #d946b8;
+        }
+        .btn-primary {
+            background-color: #d946b8;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #c02d9c;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-lg py-4 px-6 md:px-12 sticky top-0 z-50 rounded-b-xl">
+        <nav class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center space-x-3">
+                <img src="WhatsApp Image 2025-07-23 at 10.06.02 PM.jpeg" alt="Jab We Bake Logo" class="h-16 w-16 rounded-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/100x100/FFC0CB/FFFFFF?text=Logo';">
+                <h1 class="text-3xl font-bold text-gray-800">Jab We Bake</h1>
+            </div>
+            <!-- Navigation Links -->
+            <ul class="flex space-x-6">
+                <li><a href="#home" class="text-gray-700 hover:text-primary font-semibold transition duration-300">Home</a></li>
+                <li><a href="#about" class="text-gray-700 hover:text-primary font-semibold transition duration-300">About Us</a></li>
+                <li><a href="#contact" class="text-gray-700 hover:text-primary font-semibold transition duration-300">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto my-8 p-4 md:p-8">
+
+        <!-- Home Section -->
+        <section id="home" class="bg-white rounded-xl shadow-lg p-8 mb-12 flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12">
+            <div class="md:w-1/2 text-center md:text-left">
+                <h2 class="text-5xl font-extrabold text-gray-900 leading-tight mb-4">
+                    From Our Oven <br> To Your Heart!
+                </h2>
+                <p class="text-lg text-gray-600 mb-6">
+                    At Jab We Bake, we believe every celebration deserves a masterpiece. Indulge in our freshly baked, handcrafted cakes, made with love and the finest ingredients.
+                </p>
+                <a href="#gallery" class="btn-primary inline-block text-lg font-bold">Explore Our Creations</a>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="WhatsApp Image 2025-07-23 at 10.21.35 PM (1).jpeg" alt="Delicious Strawberry Cake" class="rounded-xl shadow-xl w-full max-w-md object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/FFC0CB/FFFFFF?text=Cake';">
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="bg-white rounded-xl shadow-lg p-8 mb-12">
+            <h2 class="text-4xl font-bold text-gray-900 text-center mb-8">About Jab We Bake</h2>
+            <div class="flex flex-col md:flex-row items-center md:space-x-8">
+                <div class="md:w-1/2 mb-6 md:mb-0">
+                    <img src="WhatsApp Image 2025-07-23 at 10.21.41 PM (1).jpeg" alt="Assorted Desserts Display" class="rounded-xl shadow-md w-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/FFC0CB/FFFFFF?text=About Us';">
+                </div>
+                <div class="md:w-1/2 text-gray-700 leading-relaxed">
+                    <p class="mb-4">
+                        Jab We Bake started with a simple passion: to bring joy through delicious, homemade baked goods. We are a home baker dedicated to crafting unique and memorable cakes for all occasions, big or small. From classic flavors to custom designs, every cake is baked fresh to order, ensuring the highest quality and taste.
+                    </p>
+                    <p class="mb-4">
+                        Our commitment to using premium ingredients and our meticulous attention to detail set us apart. We believe that a cake is more than just a dessert; it's a centerpiece of celebration, a symbol of love, and a sweet memory in the making. Let us be a part of your next special moment!
+                    </p>
+                    <p>
+                        We specialize in personalized cakes, cupcakes, and other delightful treats. Tell us your vision, and we'll bake it into reality.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery/Products Section -->
+        <section id="gallery" class="bg-white rounded-xl shadow-lg p-8 mb-12">
+            <h2 class="text-4xl font-bold text-gray-900 text-center mb-8">Our Delicious Creations</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Cake 1 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden card-shadow">
+                    <img src="WhatsApp Image 2025-07-23 at 10.21.35 PM.jpeg" alt="KitKat Chocolate Cake" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/FFC0CB/FFFFFF?text=Cake+1';">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Chocolate KitKat Delight</h3>
+                        <p class="text-gray-600 text-sm">Rich chocolate cake adorned with crunchy KitKat bars and smooth chocolate ganache. A chocolate lover's dream!</p>
+                    </div>
+                </div>
+                <!-- Cake 2 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden card-shadow">
+                    <img src="WhatsApp Image 2025-07-23 at 10.21.35 PM (2).jpeg" alt="Best Mom Ever Heart Cake" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/FFC0CB/FFFFFF?text=Cake+2';">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Heartfelt Mango Dream</h3>
+                        <p class="text-gray-600 text-sm">A beautiful heart-shaped cake, perfect for expressing love, topped with fresh mango pieces and delicate cream swirls.</p>
+                    </div>
+                </div>
+                <!-- Cake 3 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden card-shadow">
+                    <img src="WhatsApp Image 2025-07-23 at 10.21.41 PM (2).jpeg" alt="Cupcake Bouquet" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/FFC0CB/FFFFFF?text=Cake+3';">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Vibrant Cupcake Bouquet</h3>
+                        <p class="text-gray-600 text-sm">A delightful arrangement of colorful cupcakes, perfect for gifting or adding a pop of fun to any gathering.</p>
+                    </div>
+                </div>
+                <!-- Cake 4 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden card-shadow">
+                    <img src="WhatsApp Image 2025-07-23 at 10.21.41 PM (3).jpeg" alt="Chocolate Chip Cheesecake" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/FFC0CB/FFFFFF?text=Cake+4';">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Classic Chocolate Chip Cheesecake</h3>
+                        <p class="text-gray-600 text-sm">Smooth and creamy cheesecake with a rich chocolate crust, speckled with delightful chocolate chips.</p>
+                    </div>
+                </div>
+                <!-- Cake 5 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden card-shadow">
+                    <img src="WhatsApp Image 2025-07-23 at 10.21.41 PM (4).jpeg" alt="Nutty Chocolate Cake" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/FFC0CB/FFFFFF?text=Cake+5';">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Decadent Nutty Chocolate</h3>
+                        <p class="text-gray-600 text-sm">A rich chocolate cake generously topped with a medley of crunchy nuts, offering a perfect texture contrast.</p>
+                    </div>
+                </div>
+                <!-- Cake 6 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden card-shadow">
+                    <img src="WhatsApp Image 2025-07-23 at 10.21.41 PM (5).jpeg" alt="White Cake with Pink Hearts" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/FFC0CB/FFFFFF?text=Cake+6';">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Sweet Pink Heart Cake</h3>
+                        <p class="text-gray-600 text-sm">A charming white frosted cake adorned with adorable pink hearts, ideal for anniversaries and romantic gestures.</p>
+                    </div>
+                </div>
+                <!-- Cake 7 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden card-shadow">
+                    <img src="WhatsApp Image 2025-07-23 at 10.21.41 PM (8).jpeg" alt="Oreo Cheesecake Slice" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/FFC0CB/FFFFFF?text=Cake+7';">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Irresistible Oreo Cheesecake</h3>
+                        <p class="text-gray-600 text-sm">A creamy cheesecake slice packed with chunks of Oreo cookies, offering a delightful crunch in every bite.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact" class="bg-white rounded-xl shadow-lg p-8 mb-12 text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-8">Get in Touch!</h2>
+            <p class="text-lg text-gray-700 mb-6">
+                Ready to order your custom cake or have a question? We'd love to hear from you!
+            </p>
+            <div class="flex flex-col items-center space-y-4">
+                <p class="text-2xl font-semibold text-gray-800">
+                    <span class="text-primary">Instagram:</span> <a href="https://www.instagram.com/jab_we.bake/" target="_blank" class="hover:underline">jab_we.bake</a>
+                </p>
+                <p class="text-2xl font-semibold text-gray-800">
+                    <span class="text-primary">Phone:</span> <a href="tel:6284337114" class="hover:underline">6284337114</a>
+                </p>
+            </div>
+            <p class="text-md text-gray-500 mt-8">
+                Feel free to send us a message on Instagram or give us a call!
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-6 px-6 md:px-12 text-center rounded-t-xl">
+        <p>&copy; 2025 Jab We Bake. All rights reserved.</p>
+        <p class="text-sm mt-2">Crafted with love and flour.</p>
+    </footer>
+
+</body>
+</html>
