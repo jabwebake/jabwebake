@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jab We Bake - Delicious Cakes for Every Occasion</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Custom CSS for a modern touch */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcf8f9; /* Very light, soft pink/off-white */
+            line-height: 1.6;
+            color: #333; /* Darker text for readability */
+        }
+        .text-primary {
+            color: #e91e63; /* A vibrant, modern pink */
+        }
+        .bg-primary {
+            background-color: #e91e63;
+        }
+        .border-primary {
+            border-color: #e91e63;
+        }
+        .btn-primary {
+            background-color: #e91e63;
+            color: white;
+            padding: 0.85rem 2rem;
+            border-radius: 9999px; /* Fully rounded pills */
+            font-weight: 600; /* Semi-bold */
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 6px 12px rgba(233, 30, 99, 0.3); /* Softer, more pronounced shadow */
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .btn-primary:hover {
+            background-color: #c2185b; /* Darker pink on hover */
+            box-shadow: 0 8px 16px rgba(233, 30, 99, 0.4);
+            transform: translateY(-2px); /* Subtle lift effect */
+        }
+        .card-shadow {
+            box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.08), 0 8px 12px -5px rgba(0, 0, 0, 0.04); /* More diffused shadow */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .card-shadow:hover {
+            transform: translateY(-5px); /* Lift card on hover */
+            box-shadow: 0 20px 40px -8px rgba(0, 0, 0, 0.12), 0 10px 15px -5px rgba(0, 0, 0, 0.06);
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.75rem; /* More rounded corners */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .form-input {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #cbd5e0; /* Lighter border */
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #e91e63;
+            box-shadow: 0 0 0 4px rgba(233, 30, 99, 0.2);
+        }
+        /* Hero section specific styling for background overlay and text */
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.55); /* Slightly darker overlay for text contrast */
+            backdrop-filter: blur(3px); /* Subtle blur effect */
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            border-radius: 0.75rem; /* Match section border radius */
+        }
+        /* Section styling for consistent padding and background */
+        section {
+            background-color: white;
+            padding: 3.5rem; /* More generous padding */
+            border-radius: 1.5rem; /* More rounded sections */
+            margin-bottom: 3rem; /* Consistent spacing between sections */
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08); /* More subtle section shadow */
+        }
+        /* Header navigation hover effect */
+        .nav-link {
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            padding-bottom: 0.25rem;
+        }
+        .nav-link:hover {
+            color: #e91e63;
+            transform: translateY(-2px);
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #e91e63;
+            transition: width 0.3s ease-in-out;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header Section -->
+    <header class="bg-gray-900 shadow-md py-4 px-6 md:px-12 sticky top-0 z-50 rounded-b-3xl">
+        <nav class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center space-x-3">
+                <img src="WhatsApp Image 2025-07-23 at 10.06.02 PM.jpeg" alt="Jab We Bake Logo" class="h-16 w-16 rounded-full object-cover shadow-inner border-2 border-primary" onerror="this.onerror=null;this.src='https://placehold.co/100x100/FFC0CB/FFFFFF?text=Logo';">
+                <h1 class="text-3xl font-extrabold text-white">Jab We Bake</h1>
+            </div>
+            <!-- Navigation Links -->
+            <ul class="flex space-x-8">
+                <li><a href="#home" class="nav-link text-white font-semibold">Home</a></li>
+                <li><a href="#about" class="nav-link text-white font-semibold">About Us</a></li>
+                <li><a href="#gallery" class="nav-link text-white font-semibold">Gallery</a></li>
+                <li><a href="#testimonials" class="nav-link text-white font-semibold">Testimonials</a></li>
+                <li><a href="#videos" class="nav-link text-white font-semibold">Videos</a></li>
+                <li><a href="#contact" class="nav-link text-white font-semibold">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto my-16 p-4 md:p-8">
+
+        <!-- Home Section -->
+        <section id="home" class="flex flex-col md:flex-row items-center justify-center space-y-12 md:space-y-0 md:space-x-20">
+            <div class="md:w-1/2 text-center md:text-left">
+                <h2 class="text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+                    From Our Oven <br> To Your Heart!
+                </h2>
+                <p class="text-lg text-gray-700 mb-8 max-w-prose mx-auto md:mx-0">
+                    At Jab We Bake, every celebration deserves a masterpiece. Indulge in our freshly baked, handcrafted cakes, made with love and the finest ingredients. We turn your sweet dreams into delicious reality.
+                </p>
+                <a href="#gallery" class="btn-primary inline-block">Explore Our Creations</a>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="WhatsApp Image 2025-07-23 at 10.21.35 PM (1).jpeg" alt="Delicious Strawberry Cake" class="rounded-3xl shadow-2xl w-full max-w-md object-cover transform transition-transform duration-500 hover:scale-105" onerror="this.onerror=null;this.src='https://placehold.co/600x400/FFC0CB/FFFFFF?text=Cake';">
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="flex flex-col md:flex-row items-center md:space-x-20">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <img src="WhatsApp Image 2025-07-23 at 10.21.41 PM (1).jpeg" alt="Assorted Desserts Display" class="rounded-3xl shadow-2xl w-full object-cover transform transition-transform duration-500 hover:scale-105" onerror="this.onerror=null;this.src='https://placehold.co/600x400/FFC0CB/FFFFFF?text=About Us';">
+            </div>
+            <div class="md:w-1/2 text-gray-700 leading-relaxed">
+                <h2 class="text-4xl font-bold text-gray-900 text-center md:text-left mb-8">About Jab We Bake</h2>
+                <p class="mb-5 max-w-prose mx-auto md:mx-0">
+                    Jab We Bake started with a simple passion: to bring joy through delicious, homemade baked goods. We are a home baker dedicated to crafting unique and memorable cakes for all occasions, big or small. From classic flavors to custom designs, every cake is baked fresh to order, ensuring the highest quality and taste.
+                </p>
+                <p class="mb-5 max-w-prose mx-auto md:mx-0">
+                    Our unwavering commitment to using premium, locally-sourced ingredients and our meticulous attention to detail set us apart. We believe that a cake is more than just a dessert; it's a centerpiece of celebration, a symbol of love, and a sweet memory in the making. Let us be a part of your next special moment, creating edible art that delights both the eyes and the palate.
+                </p>
+                <p class="max-w-prose mx-auto md:mx-0">
+                    We specialize in personalized cakes, delightful cupcakes, and an array of other exquisite treats. Share your vision with us, and watch as we transform it into a delectable reality, baked just for you.
+                </p>
+            </div>
+        </section>
+
+        <!-- Gallery/Products Section -->
+        <section id="gallery">
+            <h2 class="text-4xl font-bold text-gray-900 text-center mb-12">Our Delicious Creations</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Cake 1 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden card-shadow">
+                    <img src="WhatsApp Image 2025-07-23 at 10.21.35 PM.jpeg" alt="KitKat Chocolate Cake" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/FFC0CB/FFFFFF?text=Cake+1';">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Chocolate KitKat Delight</h3>
+                        <p class="text-gray-600 text-sm">Rich chocolate cake adorned with crunchy KitKat bars and smooth chocolate ganache. A chocolate lover's dream!</p>
+                    </div>
+                </div>
+                <!-- Cake 2 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden card-shadow">
+                    <img src="WhatsApp Image 2025-07-23 at 10.21.35 PM (2).jpeg" alt="Best Mom Ever Heart Cake" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/FFC0CB/FFFFFF?text=Cake+2';">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Heartfelt Mango Dream</h3>
+                        <p class="text-gray-600 text-sm">A beautiful heart-shaped cake, perfect for expressing love, topped with fresh mango pieces and delicate cream swirls.</p>
+                    </div>
+                </div>
+                <!-- Cake 3 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden card-shadow">
+                    <img src="WhatsApp Image 2025-07-23 at 10.21.41 PM (2).jpeg" alt="Cupcake Bouquet" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/FFC0CB/FFFFFF?text=Cake+3';">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Vibrant Cupcake Bouquet</h3>
+                        <p class="text-gray-600 text-sm">A delightful arrangement of colorful cupcakes, perfect for gifting or adding a pop of fun to any gathering.</p>
+                    </div>
+                </div>
+                <!-- Cake 4 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden card-shadow">
+                    <img src="WhatsApp Image 2025-07-23 at 10.21.41 PM (3).jpeg" alt="Chocolate Chip Cheesecake" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/FFC0CB/FFFFFF?text=Cake+4';">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Classic Chocolate Chip Cheesecake</h3>
+                        <p class="text-gray-600 text-sm">Smooth and creamy cheesecake with a rich chocolate crust, speckled with delightful chocolate chips.</p>
+                    </div>
+                </div>
+                <!-- Cake 5 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden card-shadow">
+                    <img src="WhatsApp Image 2025-07-23 at 10.21.41 PM (4).jpeg" alt="Nutty Chocolate Cake" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/FFC0CB/FFFFFF?text=Cake+5';">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Decadent Nutty Chocolate</h3>
+                        <p class="text-gray-600 text-sm">A rich chocolate cake generously topped with a medley of crunchy nuts, offering a perfect texture contrast.</p>
+                    </div>
+                </div>
+                <!-- Cake 6 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden card-shadow">
+                    <img src="WhatsApp Image 2025-07-23 at 10.21.41 PM (5).jpeg" alt="White Cake with Pink Hearts" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/FFC0CB/FFFFFF?text=Cake+6';">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Sweet Pink Heart Cake</h3>
+                        <p class="text-gray-600 text-sm">A charming white frosted cake adorned with adorable pink hearts, ideal for anniversaries and romantic gestures.</p>
+                    </div>
+                </div>
+                <!-- Cake 7 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden card-shadow">
+                    <img src="WhatsApp Image 2025-07-23 at 10.21.41 PM (8).jpeg" alt="Oreo Cheesecake Slice" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/FFC0CB/FFFFFF?text=Cake+7';">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Irresistible Oreo Cheesecake</h3>
+                        <p class="text-gray-600 text-sm">A creamy cheesecake slice packed with chunks of Oreo cookies, offering a delightful crunch in every bite.</p>
+                    </div>
+                </div>
+                <!-- Cake 8 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden card-shadow">
+                    <img src="WhatsApp Image 2025-07-23 at 10.21.41 PM (6).jpeg" alt="Chocolate Drizzle Cake" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/FFC0CB/FFFFFF?text=Cake+8';">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Decadent Chocolate Drizzle</h3>
+                        <p class="text-gray-600 text-sm">Rich chocolate cake with elegant drizzles and golden pearls, perfect for any special occasion.</p>
+                    </div>
+                </div>
+                <!-- Cake 9 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden card-shadow">
+                    <img src="WhatsApp Image 2025-07-23 at 10.21.41 PM (7).jpeg" alt="Sliced Chocolate Cake" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/FFC0CB/FFFFFF?text=Cake+9';">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Perfectly Sliced Chocolate</h3>
+                        <p class="text-gray-600 text-sm">A beautifully sliced chocolate cake, ready to serve, showcasing its rich texture and delicious layers.</p>
+                    </div>
+                </div>
+                <!-- Cake 10 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden card-shadow">
+                    <img src="WhatsApp Image 2025-07-23 at 10.21.41 PM.jpeg" alt="Chirag Birthday Cake" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/FFC0CB/FFFFFF?text=Cake+10';">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Chirag's Birthday Special</h3>
+                        <p class="text-gray-600 text-sm">A personalized birthday cake with elegant grey frosting, black accents, and yellow sprinkles, topped with a 'Happy Birthday' sign.</p>
+                    </div>
+                </div>
+                <!-- Cake 11 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden card-shadow">
+                    <img src="WhatsApp Image 2025-07-23 at 10.21.42 PM (1).jpeg" alt="Lotus Biscoff Cheesecake" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/FFC0CB/FFFFFF?text=Cake+11';">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Creamy Lotus Biscoff</h3>
+                        <p class="text-gray-600 text-sm">Indulge in the rich, spiced flavor of Lotus Biscoff in this creamy and delightful cake, topped with biscoff cookies and crumbs.</p>
+                    </div>
+                </div>
+                <!-- Cake 12 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden card-shadow">
+                    <img src="WhatsApp Image 2025-07-23 at 10.21.42 PM (2).jpeg" alt="Anniversary Brownie Cake" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/FFC0CB/FFFFFF?text=Cake+12';">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Anniversary Brownie Delight</h3>
+                        <p class="text-gray-600 text-sm">A rich brownie cake, perfect for anniversaries, with a sweet message for "Dadu Dadi" and chocolate chip toppings.</p>
+                    </div>
+                </div>
+                <!-- Cake 13 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden card-shadow">
+                    <img src="WhatsApp Image 2025-07-23 at 10.21.42 PM (3).jpeg" alt="Dessert Cups" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/FFC0CB/FFFFFF?text=Cake+13';">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Individual Dessert Cups</h3>
+                        <p class="text-gray-600 text-sm">Perfectly portioned dessert cups, featuring layers of creamy goodness and delightful toppings, ideal for parties.</p>
+                    </div>
+                </div>
+                <!-- Cake 14 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden card-shadow">
+                    <img src="WhatsApp Image 2025-07-23 at 10.21.42 PM (4).jpeg" alt="Chocolate Chip Cookies" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/FFC0CB/FFFFFF?text=Cake+14';">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Classic Chocolate Chip Cookies</h3>
+                        <p class="text-gray-600 text-sm">Soft, chewy, and loaded with chocolate chips – our classic cookies are a timeless treat for any time of day.</p>
+                    </div>
+                </div>
+                <!-- Cake 15 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden card-shadow">
+                    <img src="WhatsApp Image 2025-07-23 at 10.21.42 PM.jpeg" alt="Full Lotus Biscoff Cake" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/FFC0CB/FFFFFF?text=Cake+15';">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Grand Lotus Biscoff Cake</h3>
+                        <p class="text-gray-600 text-sm">A full-sized version of our popular Lotus Biscoff cake, featuring a creamy topping and a signature biscoff cookie.</p>
+                    </div>
+                </div>
+                <!-- Cake 16 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden card-shadow">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Lotus Biscoff Dessert Tub</h3>
+                        <p class="text-gray-600 text-sm">Convenient and delicious, this dessert tub is layered with creamy Lotus Biscoff goodness, perfect for on-the-go indulgence.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials">
+            <h2 class="text-4xl font-bold text-gray-900 text-center mb-12">What Our Customers Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-8 rounded-2xl card-shadow">
+                    <p class="text-gray-700 italic mb-5 text-lg leading-relaxed">"Jab We Bake delivered the most exquisite cake for my daughter's birthday! Not only was it stunning, but it tasted absolutely divine. The attention to detail was incredible. Highly recommend for any special occasion!"</p>
+                    <p class="font-semibold text-primary text-right">- Priya S.</p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-8 rounded-2xl card-shadow">
+                    <p class="text-gray-700 italic mb-5 text-lg leading-relaxed">"The cupcakes from Jab We Bake are a true treat. Fresh, flavorful, and beautifully decorated, they were the highlight of our small gathering. Everyone kept asking where they were from!"</p>
+                    <p class="font-semibold text-primary text-right">- Rahul K.</p>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-8 rounded-2xl card-shadow">
+                    <p class="text-gray-700 italic mb-5 text-lg leading-relaxed">"I ordered a custom cake, and it exceeded all my expectations. The artistic design was breathtaking, and the taste was out of this world. Thank you, Jab We Bake, for making our event extra special!"</p>
+                    <p class="font-semibold text-primary text-right">- Simran G.</p>
+                </div>
+                <!-- Testimonial 4 -->
+                <div class="bg-gray-50 p-8 rounded-2xl card-shadow">
+                    <p class="text-gray-700 italic mb-5 text-lg leading-relaxed">"Every bite was a delight! The quality of ingredients and the passion put into baking truly shines through. Their desserts are simply irresistible. My go-to for all sweet cravings now."</p>
+                    <p class="font-semibold text-primary text-right">- Amit D.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Videos Section -->
+        <section id="videos">
+            <h2 class="text-4xl font-bold text-gray-900 text-center mb-12">Our Videos</h2>
+            <p class="text-center text-gray-700 mb-8 max-w-prose mx-auto">
+                Get a glimpse into the magic behind Jab We Bake! See our creations come to life.
+                <br>
+                <small class="text-red-600 font-medium">Note: Direct Google Drive video embeds can sometimes have playback issues. For best results, consider uploading videos to YouTube or Vimeo and using their embed codes.</small>
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Video 1 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden card-shadow">
+                    <div class="video-container">
+                        <iframe src="https://drive.google.com/file/d/12zlaEylhM03UwDHugDo3LJnQme868c3x/preview" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Baking Bliss</h3>
+                        <p class="text-gray-600 text-sm">A quick peek into our baking process, where every cake is crafted with care.</p>
+                    </div>
+                </div>
+                <!-- Video 2 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden card-shadow">
+                    <div class="video-container">
+                        <iframe src="https://drive.google.com/file/d/1yaPcYahnbuagDpyf2wanpBV8vK3TxC6Z/preview" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Decorating Delights</h3>
+                        <p class="text-gray-600 text-sm">Watch as we add the finishing touches to our beautiful cake creations.</p>
+                    </div>
+                </div>
+                <!-- Video 3 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden card-shadow">
+                    <div class="video-container">
+                        <iframe src="https://drive.google.com/file/d/1odTX9wJrSsvO8Wyrb3_9sWEIMmv0Fiyy/preview" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Sweet Moments</h3>
+                        <p class="text-gray-600 text-sm">Capturing the joy and sweetness that our cakes bring to celebrations.</p>
+                    </div>
+                </div>
+                <!-- Video 4 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden card-shadow">
+                    <div class="video-container">
+                        <iframe src="https://drive.google.com/file/d/1XsJFplDbq6mxl1MbbdVSxKHcbESYusjU/preview" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Cupcake Creations</h3>
+                        <p class="text-gray-600 text-sm">A delightful showcase of our colorful and delicious cupcakes.</p>
+                    </div>
+                </div>
+                <!-- Video 5 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden card-shadow">
+                    <div class="video-container">
+                        <iframe src="https://drive.google.com/file/d/1kOwWBvMaAIv8uxcbMVsfE62mvQTgTBOP/preview" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Behind the Scenes</h3>
+                        <p class="text-gray-600 text-sm">An exclusive look at the dedication and artistry behind every Jab We Bake treat.</p>
+                    </div>
+                </div>
+                <!-- Video 6 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden card-shadow">
+                    <div class="video-container">
+                        <iframe src="https://drive.google.com/file/d/1jTrNaU0XqcURiVW08NeTef_H3Nr5vN2E/preview" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-gray-800 mb-2">Our Passion for Pastry</h3>
+                        <p class="text-gray-600 text-sm">Discover the passion that drives us to create the perfect baked goods for you.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact">
+            <h2 class="text-4xl font-bold text-gray-900 text-center mb-12">Get in Touch!</h2>
+            <p class="text-lg text-gray-700 text-center mb-8 max-w-prose mx-auto">
+                Have a question, a special request, or want to place an order? Fill out the form below, and we'll get back to you as soon as possible!
+            </p>
+            <form class="max-w-xl mx-auto space-y-6 p-8 bg-white rounded-2xl shadow-lg">
+                <div>
+                    <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Your Name</label>
+                    <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required>
+                </div>
+                <div>
+                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Your Email</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" required>
+                </div>
+                <div>
+                    <label for="subject" class="block text-gray-700 text-sm font-bold mb-2">Subject</label>
+                    <input type="text" id="subject" name="subject" class="form-input" placeholder="Regarding a custom cake order..." required>
+                </div>
+                <div>
+                    <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Your Message</label>
+                    <textarea id="message" name="message" rows="6" class="form-input resize-y" placeholder="Tell us about your sweet needs!" required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn-primary font-bold text-lg">Submit</button>
+                </div>
+            </form>
+            <div class="flex flex-col items-center space-y-4 mt-12">
+                <p class="text-2xl font-semibold text-gray-800">
+                    <span class="text-primary">Instagram:</span> <a href="https://www.instagram.com/jab_we.bake/" target="_blank" class="hover:underline transition duration-300">jab_we.bake</a>
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-10 px-6 md:px-12 text-center rounded-t-3xl">
+        <p class="text-lg mb-2">&copy; 2025 Jab We Bake. All rights reserved.</p>
+        <!-- Removed location information -->
+    </footer>
+
+</body>
+</html>
